@@ -20,20 +20,70 @@
 
 
 
-
+<!-- main section with repos  -->
 
   <div class="row">
     <div class="col-md-12">
+
       <div class="col-md-4">
         <ul id="profile-bar">
 
         </ul>
       </div>
+
+      <div class="col-md-8">
+        <nav class="navbar white-background">
+          <ul class="list-inline repo-nav">
+            <li>Overview</li>
+            <li>Repositories</li>
+            <li>Stars</li>
+            <li>Followed</li>
+            <li>Following</li>
+          </ul>
+        </nav>
+
+        <div class="flex-table repo-search">
+          <form class="flex-table-item flex-table-item-primary" action="index.html" method="post">
+            <input type="search" class="form-control" name="repos-search" placeholder="Search respositories...">
+          </form>
+          <div class="flex-table-item text-right">
+            <div class="select-menu">
+              <button type="button" class="btn select-menu-button" name="button"><i>Type:</i><span><strong>All</strong></span></button>
+            </div>
+            <div class="select-menu">
+              <button type="button" class="btn select-menu-button" name="button"><i>Language:</i><span><strong>All</strong></span></button>
+            </div>
+            <a href="/new" class="btn btn-primary"></a>
+          </div>
+        </div>
+
+
+
+
+
+        <ul id="repos-section">
+
+
+        </ul>
+      </div>
+
     </div>
   </div>
 
 
+<!-- end main section  -->
 
+<!-- start footer -->
+
+<footer>
+
+
+  
+</footer>
+
+
+
+<!-- end footer  -->
 
 
 
@@ -48,11 +98,19 @@
 
     <script id="profile-template" type="text/x-handlebars-template">
         <img src={{avatar_url}} alt="">
-        <li>{{name}}</li>
+        <h1>{{name}}</h1>
         <li>{{blog}}</li>
         <li>{{location}}</li>
         <li>{{email}}</li>
         <li>{{html_url}}</li>
+    </script>
+
+    <script id="repos-template" type="text/x-handlebars-template">
+        <div class="repo-links">
+          <a href={{html_url}}><h4>{{name}}</h4></a>
+          <p>{{description}}</p>
+          <span>{{language}}</span>
+        </div>
     </script>
 
     <script src="js/bundle.js"></script>

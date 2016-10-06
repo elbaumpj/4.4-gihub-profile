@@ -12,6 +12,7 @@ if(githubtoken !== undefined){
 }
 
 $.ajax('https://api.github.com/users/elbaumpj').then(getUserInfo);
+$.ajax('https://api.github.com/users/elbaumpj/repos?sort=pushed').then(getRepos);
 
 function getUserInfo(data){
   var userInfo = data;
@@ -22,5 +23,18 @@ function getUserInfo(data){
   var template = Handlebars.compile(source);
 
   $profileBar.append(template(userInfo));
+}
 
+function getRepos(data) {
+  var repos = data;
+  var $reposSection = $('#repos-section');
+  console.log(repos);
+
+  var source = $('#repos-template').html();
+  var template = Handlebars.compile(source);
+
+
+  _.each(repos, function(repos){
+      $reposSection.append(template(repos));
+    });
 }
