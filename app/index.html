@@ -8,7 +8,52 @@
   </head>
   <body>
 
-    <h1>Hello World!</h1>
+    <nav id="top-nav" class="navbar navbar-default">
+      <img src="images/GitHub-Mark-32px.png" alt="" />
+      <input type="text" class="form" placeholder="Search GitHub">
+      <ul class="list-inline">
+        <li><strong>Pull Requests</strong></li>
+        <li><strong>Issues</strong></li>
+        <li><strong>Gist</strong></li>
+      </ul>
+    </nav>
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-4">
+        <ul id="profile-bar">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script id="profile-template" type="text/x-handlebars-template">
+        <img src={{avatar_url}} alt="">
+        <li>{{name}}</li>
+        <li>{{blog}}</li>
+        <li>{{location}}</li>
+        <li>{{email}}</li>
+        <li>{{html_url}}</li>
+    </script>
 
     <script src="js/bundle.js"></script>
   </body>

@@ -15,3 +15,17 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
+ul {
+  list-style: none;
+}
+
+// top nav styling
+
+#top-nav {
+  display: flex;
+  align-items: center;
+  input, li {
+    margin-left: 20px;
+  }
+}
