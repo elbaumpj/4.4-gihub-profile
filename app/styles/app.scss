@@ -52,6 +52,9 @@ ul {
   display: flex;
   align-items: center;
 }
+.repo-search-menus {
+  display: inline-flex;
+}
 
 
 // profile template
@@ -64,6 +67,11 @@ ul {
   }
 }
 
+#profile-bar {
+  img {
+    border-radius: 4%;
+  }
+}
 // repos template
 #repos-template {
   h4 {
@@ -83,4 +91,28 @@ ul {
 .repo-links {
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
+}
+
+// footer styling
+footer {
+  border-top: 1px solid #EEEEEE;
+  font-size: 12px;
+  line-height: 100px;
+  ul {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 15px;
+  }
+  li {
+    margin: 0 10px;
+    color: #4095CF;
+  }
+  img {
+    font-size: 10px;
+    margin-left: 165px;
+  }
+}
+
+.right-footer-links {
+  float: right;
 }
