@@ -47,6 +47,7 @@ ul {
 // repo nav
 .scroll-nav {
   border-bottom: 1px solid #ECECEC;
+  margin-bottom: 10px;
 }
 .repo-nav {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
@@ -60,11 +61,13 @@ ul {
 .repo-search {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
     input {
       width: 350px;
     }
     .menu {
-      background-color: #FAFAFA;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
     }
 }
 
@@ -86,14 +89,15 @@ ul {
         border-radius: 4%;
     }
     h6 {
-      color: #555555;
+      color: #767676;
       font-size: 20px;
     }
     .bio {
       color: #757575;
     }
     button {
-      background-color: #FAFAFA;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
     }
 }
 
@@ -111,7 +115,7 @@ ul {
 .profile-info {
   border-bottom: 1px solid #ECECEC;
 }
-// repos template
+// repos template and section
 
 #repos-template {
     h4 {
@@ -124,16 +128,21 @@ ul {
         color: #767676;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
     }
-
-    span {
-        float: right;
-    }
 }
 
 .repo-links {
     border-top: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
+    padding: 20px 0;
+    p {
+      display: inline-block;
+    }
+    span {
+      float: right;
+      color: #767676;
+    }
 }
+
 // footer styling
 footer {
     border-top: 1px solid #EEEEEE;
