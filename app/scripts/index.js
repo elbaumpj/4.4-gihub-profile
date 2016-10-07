@@ -11,6 +11,7 @@ if(githubtoken !== undefined){
  });
 }
 
+
 $.ajax('https://api.github.com/users/elbaumpj').then(getUserInfo);
 $.ajax('https://api.github.com/users/elbaumpj/repos?sort=pushed').then(getRepos);
 $.ajax('https://api.github.com/users/elbaumpj/orgs').then(getOrgAvatar);
@@ -35,8 +36,8 @@ function getRepos(data) {
   var template = Handlebars.compile(source);
 
 
-  _.each(repos, function(repos){
-      $reposSection.append(template(repos));
+  _.each(repos, function(repo){
+      $reposSection.append(template(repo));
     });
 }
 
@@ -47,5 +48,19 @@ function getOrgAvatar(data) {
   var source = $('#orgs-template').html();
   var template = Handlebars.compile(source);
 
-  $orgSection.append(template(orgData));
+  _.each(orgData, function(org){
+      $orgSection.append(template(org));
+    });
 }
+
+//scroll behavior
+//Mady helped with this one
+var $positionY = $('.scroll-nav').offset().top;
+
+$(window).on('scroll', function(){
+  if ($positionY <= $(window).scrollTop()) {
+    $('.scroll-nav').addClass('fix-scroll');
+} else {
+  $('.scroll-nav').removeClass('fix-scroll');
+}
+});

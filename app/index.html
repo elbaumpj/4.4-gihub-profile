@@ -28,19 +28,20 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <ul id="profile-bar">
 
                 </ul>
 
+                <h4>Organizations</h4>
                 <div id="org-section">
 
                 </div>
 
             </div>
 
-            <div class="col-md-8">
-                <nav class="navbar white-background">
+            <div class="col-md-7">
+                <nav class="navbar white-background scroll-nav">
                     <ul class="list-inline repo-nav">
                         <li>Overview</li>
                         <li>Repositories</li>
@@ -128,10 +129,12 @@
           <li class="bio">{{bio}}</li>
           <button class="btn btn-block">Edit profile</button>
         </div>
-        <li><span class="octicon octicon-location"></span> {{location}}</li>
-        <li class="blue-text"><span class="octicon octicon-mail"></span> {{email}}</li>
-        <li class="blue-text"><span class="octicon octicon-link"></span> {{blog}}</li>
-        <li>{{created_at}}</li>
+        <div class="profile-info">
+          <li><span class="octicon octicon-location"></span> {{location}}</li>
+          <li class="blue-text"><span class="octicon octicon-mail"></span> {{email}}</li>
+          <li class="blue-text"><span class="octicon octicon-link"></span> {{blog}}</li>
+          <li>{{created_at}}</li>
+        </div>
     </script>
 
     <script id="repos-template" type="text/x-handlebars-template">
@@ -143,7 +146,7 @@
     </script>
 
     <script id="orgs-template" type="text/x-handlebars-template">
-      <img src={{avatar_url}}.png alt="">
+      <img src={{avatar_url}} alt="">
     </script>
 
     <script src="js/bundle.js"></script>
