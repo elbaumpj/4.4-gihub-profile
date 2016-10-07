@@ -1,108 +1,115 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>4 4 github profile</title>
     <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" media="screen" title="no title">
+</head>
+
+<body>
 
     <nav id="top-nav" class="navbar navbar-default">
-      <img src="images/GitHub-Mark-32px.png" alt="" />
-      <input type="text" class="form" placeholder="Search GitHub">
-      <ul class="list-inline">
-        <li><strong>Pull Requests</strong></li>
-        <li><strong>Issues</strong></li>
-        <li><strong>Gist</strong></li>
-      </ul>
+        <img src="images/GitHub-Mark-32px.png" alt="" />
+        <input type="text" class="form" placeholder="Search GitHub">
+        <ul class="list-inline">
+            <li><strong>Pull Requests</strong></li>
+            <li><strong>Issues</strong></li>
+            <li><strong>Gist</strong></li>
+        </ul>
     </nav>
 
 
 
-<!-- main section with repos  -->
+    <!-- main section with repos  -->
 
-  <div class="row">
-    <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
 
-      <div class="col-md-4">
-        <ul id="profile-bar">
+            <div class="col-md-4">
+                <ul id="profile-bar">
 
-        </ul>
-      </div>
+                </ul>
 
-      <div class="col-md-8">
-        <nav class="navbar white-background">
-          <ul class="list-inline repo-nav">
-            <li>Overview</li>
-            <li>Repositories</li>
-            <li>Stars</li>
-            <li>Followed</li>
-            <li>Following</li>
-          </ul>
-        </nav>
+                <div id="org-section">
 
-        <div class="flex-table repo-search">
-          <form class="flex-table-item flex-table-item-primary" action="index.html" method="post">
-            <input type="search" class="form-control" name="repos-search" placeholder="Search respositories...">
-          </form>
-          <div class="repo-search-menus text-right">
-            <div class="select-menu">
-              <button type="button" class="btn select-menu-button" name="button"><i>Type:</i><span><strong>All</strong></span></button>
+                </div>
+
             </div>
-            <div class="select-menu">
-              <button type="button" class="btn select-menu-button" name="button"><i>Language:</i><span><strong>All</strong></span></button>
+
+            <div class="col-md-8">
+                <nav class="navbar white-background">
+                    <ul class="list-inline repo-nav">
+                        <li>Overview</li>
+                        <li>Repositories</li>
+                        <li>Stars</li>
+                        <li>Followed</li>
+                        <li>Following</li>
+                    </ul>
+                </nav>
+
+                <div class="flex-table repo-search">
+                    <form class="flex-table-item flex-table-item-primary" action="index.html" method="post">
+                        <input type="search" class="form-control" name="repos-search" placeholder="Search respositories...">
+                    </form>
+                    <div class="repo-search-menus text-right">
+                        <div class="select-menu">
+                            <button type="button" class="btn select-menu-button menu" name="button"><span>Type:</span><span><strong> All <span class="octicon octicon-triangle-down"></span></strong></span></button>
+                        </div>
+                        <div class="select-menu">
+                            <button type="button" class="btn select-menu-button menu" name="button"><span>Language:</span><span><strong> All <span class="octicon octicon-triangle-down"></span></strong></span></button>
+                        </div>
+                        <button class="btn new-button"><span class="octicon octicon-repo-clone"></span> New</button>
+                    </div>
+                </div>
+
+
+
+
+
+                <ul id="repos-section">
+
+
+                </ul>
+
             </div>
-            <a href="/new" class="btn btn-primary"></a>
-          </div>
+
         </div>
-
-
-
-
-
-        <ul id="repos-section">
-
-
-        </ul>
-      </div>
-
     </div>
-  </div>
 
 
-<!-- end main section  -->
+    <!-- end main section  -->
 
-<!-- start footer -->
+    <!-- start footer -->
 
-<footer>
-  <ul>
-    <li>&copy; 2016 Github, Inc.</li>
-    <li>Terms</li>
-    <li>Privacy</li>
-    <li>Security</li>
-    <li>Status</li>
-    <li>Help</li>
-  </ul>
+    <footer>
+        <ul>
+            <li>&copy; 2016 Github, Inc.</li>
+            <li>Terms</li>
+            <li>Privacy</li>
+            <li>Security</li>
+            <li>Status</li>
+            <li>Help</li>
+        </ul>
 
-<img src="images/GitHub-Mark-32px.png" alt="" />
+        <img src="images/GitHub-Mark-32px.png" alt="" />
 
-  <ul class="right-footer-links">
-    <li>Contact GitHub</li>
-    <li>API</li>
-    <li>Training</li>
-    <li>Shop</li>
-    <li>Blog</li>
-    <li>About</li>
-  </ul>
+        <ul class="right-footer-links">
+            <li>Contact GitHub</li>
+            <li>API</li>
+            <li>Training</li>
+            <li>Shop</li>
+            <li>Blog</li>
+            <li>About</li>
+        </ul>
 
-</footer>
-
-
-
-<!-- end footer  -->
+    </footer>
 
 
+
+    <!-- end footer  -->
 
 
 
@@ -114,22 +121,32 @@
 
 
     <script id="profile-template" type="text/x-handlebars-template">
-        <img src={{avatar_url}} alt="">
-        <h1>{{name}}</h1>
-        <li>{{blog}}</li>
-        <li>{{location}}</li>
-        <li>{{email}}</li>
-        <li>{{html_url}}</li>
+        <div class="avatar-block">
+          <img src={{avatar_url}} alt="">
+          <h1>{{name}}</h1>
+          <h6>{{login}}</h6>
+          <li class="bio">{{bio}}</li>
+          <button class="btn btn-block">Edit profile</button>
+        </div>
+        <li><span class="octicon octicon-location"></span> {{location}}</li>
+        <li class="blue-text"><span class="octicon octicon-mail"></span> {{email}}</li>
+        <li class="blue-text"><span class="octicon octicon-link"></span> {{blog}}</li>
+        <li>{{created_at}}</li>
     </script>
 
     <script id="repos-template" type="text/x-handlebars-template">
         <div class="repo-links">
-          <a href={{html_url}}><h4>{{name}}</h4></a>
-          <p>{{description}}</p>
-          <span>{{language}}</span>
+            <a href={{html_url}}><h4>{{name}}</h4></a>
+            <p>{{description}}</p>
+            <span>{{language}}</span>
         </div>
     </script>
 
+    <script id="orgs-template" type="text/x-handlebars-template">
+      <img src={{avatar_url}}.png alt="">
+    </script>
+
     <script src="js/bundle.js"></script>
-  </body>
+</body>
+
 </html>

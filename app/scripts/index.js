@@ -13,6 +13,7 @@ if(githubtoken !== undefined){
 
 $.ajax('https://api.github.com/users/elbaumpj').then(getUserInfo);
 $.ajax('https://api.github.com/users/elbaumpj/repos?sort=pushed').then(getRepos);
+$.ajax('https://api.github.com/users/elbaumpj/orgs').then(getOrgAvatar);
 
 function getUserInfo(data){
   var userInfo = data;
@@ -37,4 +38,14 @@ function getRepos(data) {
   _.each(repos, function(repos){
       $reposSection.append(template(repos));
     });
+}
+
+function getOrgAvatar(data) {
+  var orgData = data;
+  var $orgSection = $('#org-section');
+
+  var source = $('#orgs-template').html();
+  var template = Handlebars.compile(source);
+
+  $orgSection.append(template(orgData));
 }

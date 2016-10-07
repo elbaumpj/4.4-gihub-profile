@@ -1,118 +1,145 @@
-
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-
 *,
-*::before,
-*::after {
-  box-sizing: border-box;
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .white-background {
-  background-color: white;
+    background-color: white;
 }
 
-.btn-primary {
-  background-color: #60b044;
+.new-button {
+    background-color: #74C557;
+    color: white;
 }
 
+.blue-text {
+    color: #407CCB;
+}
 // top nav styling
-
 #top-nav {
-  display: flex;
-  align-items: center;
-  input, li {
-    margin-left: 20px;
-  }
+    display: flex;
+    align-items: center;
+    input, li {
+        margin-left: 20px;
+    }
+    input {
+      width: 360px;
+    }
 }
-
 // repo nav
-
 .repo-nav {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-  color: #5F5F5F;
-  li {
-    margin: 0 20px;
-  }
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    color: #5F5F5F;
+
+    li {
+        margin: 0 20px;
+    }
 }
 
 .repo-search {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    input {
+      width: 350px;
+    }
+    .menu {
+      background-color: #FAFAFA;
+    }
 }
+
 .repo-search-menus {
-  display: inline-flex;
+    display: inline-flex;
 }
-
-
 // profile template
 #profile-template {
-  h1 {
-    font-size: 26px;
-    display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-    line-height: 30px;
-  }
+    h1 {
+        font-size: 26px;
+        display: block;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+        line-height: 30px;
+    }
 }
 
 #profile-bar {
-  img {
-    border-radius: 4%;
-  }
+    img {
+        border-radius: 4%;
+    }
+    h6 {
+      color: #555555;
+      font-size: 20px;
+    }
+    .bio {
+      color: #757575;
+    }
+    button {
+      background-color: #FAFAFA;
+    }
+}
+
+.avatar-block {
+  border-bottom: 1px solid #ECECEC;
+  padding-bottom: 10px;
 }
 // repos template
+
 #repos-template {
-  h4 {
-    color: #4078c0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-  }
-  p {
-    margin-bottom: 10px;
-    color: #767676;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-  }
-  span {
-    float: right;
-  }
+    h4 {
+        color: #4078c0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    }
+
+    p {
+        margin-bottom: 10px;
+        color: #767676;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    }
+
+    span {
+        float: right;
+    }
 }
 
 .repo-links {
-  border-top: 1px solid #DDDDDD;
-  border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
 }
-
 // footer styling
 footer {
-  border-top: 1px solid #EEEEEE;
-  font-size: 12px;
-  line-height: 100px;
-  ul {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 15px;
-  }
-  li {
-    margin: 0 10px;
-    color: #4095CF;
-  }
-  img {
-    font-size: 10px;
-    margin-left: 165px;
-  }
+    border-top: 1px solid #EEEEEE;
+    font-size: 12px;
+    line-height: 100px;
+
+    ul {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 15px;
+    }
+
+    li {
+        margin: 0 10px;
+        color: #4095CF;
+    }
+
+    img {
+        font-size: 10px;
+        margin-left: 165px;
+    }
 }
 
 .right-footer-links {
-  float: right;
+    float: right;
 }
