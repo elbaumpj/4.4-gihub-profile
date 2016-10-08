@@ -28,12 +28,12 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="col-md-3">
+            <div class="col-md-3 col-md-offset-1">
                 <ul id="profile-bar">
 
                 </ul>
 
-                <h4>Organizations</h4>
+                <h4 class="orgs">Organizations</h4>
                 <div id="org-section">
 
                 </div>
@@ -87,7 +87,7 @@
 
     <footer>
         <ul>
-            <li>&copy; 2016 Github, Inc.</li>
+            <li class="gray-text">&copy; 2016 Github, Inc.</li>
             <li>Terms</li>
             <li>Privacy</li>
             <li>Security</li>
@@ -131,9 +131,9 @@
         </div>
         <div class="profile-info">
           <li><span class="octicon octicon-location"></span> {{location}}</li>
-          <li class="blue-text"><span class="octicon octicon-mail"></span> {{email}}</li>
-          <li class="blue-text"><span class="octicon octicon-link"></span> {{blog}}</li>
-          <li>{{created_at}}</li>
+          <li class="blue-text"><span class="octicon octicon-mail gray-text"></span> {{email}}</li>
+          <li class="blue-text"><span class="octicon octicon-link gray-text"></span> {{blog}}</li>
+          <li><span class="octicon octicon-clock"></span> Joined on Jan 23, 2016</li>
         </div>
     </script>
 
@@ -141,7 +141,7 @@
         <div class="repo-links">
             <a href={{html_url}}><h4>{{name}}</h4></a>
             <p>{{description}}</p>
-            <span>{{language}}</span>
+            <span class="language">{{language}}<span class="star"><span class="octicon octicon-star"></span> 0</span></span>
         </div>
     </script>
 
