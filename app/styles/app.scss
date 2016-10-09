@@ -56,6 +56,14 @@ h1 {
     input {
       width: 360px;
     }
+    div {
+      margin-left: 375px;
+      img {
+        height: 20px;
+        width: 20px;
+        border-radius: 4%;
+      }
+    }
 }
 // repo nav
 .scroll-nav {
